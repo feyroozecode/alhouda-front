@@ -12,6 +12,8 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
   },
   "dependencies": {
+    "flowbite": "^1.8.1",
+    "flowbite-vue": "^0.0.17-next.2",
     "vue": "^3.3.4",
     "vue-router": "^4.2.4"
   },
