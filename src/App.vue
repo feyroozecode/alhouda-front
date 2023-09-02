@@ -2,21 +2,18 @@
 import headerComponent from './components/headerComponent.vue';
 import adminHeaderComponent from './components/adminHeaderComponent.vue';
 // useRoute
-import { useRouter, useRoute } from 'vue-router';
+import { useRoute } from 'vue-router';
 import { computed, watch, ref } from 'vue';
 
 
-
-const router = useRouter();
 
 // current selected Item with ref and method to get current route path 
 const isAdminRoute = ref(false);
 const route = useRoute();
 
-
-// check if is containt admin using computed
+// check if is containt admin and dont containt login  using computed 
 const currentRoute = computed(() => {
-  return route.path.includes('/admin');
+  return route.path.includes('admin') && !route.path.includes('login');
 })
 
 

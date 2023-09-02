@@ -1,34 +1,37 @@
 <template>
     <div class="bg-gray-100 p-5">
         <header class="w-full">
-            <h1>Alhouda </h1>
-            <nav class="mt-4 mr-20">
-              
-                <router-link class="p-2 text-green-700"  to="/">Home</router-link> 
-                <router-link class="p-2 text-green-700"  to="/about">About</router-link>
-                <router-link class="p-2 text-green-700"  to="/admin/login">Admin</router-link>
-            </nav>
+
+            <Navbar>
+                <template #logo>
+                  
+                    <a href="/" class="text-xl font-weight-700"> Alhouda</a>
+                  
+                </template>
+                <template #default={isShowMenu}>
+                    <NavbarCollapse :isShowMenu="isShowMenu">
+                        <NavbarLink > <router-link class="p-2 "  to="/">Home</router-link>  </NavbarLink>
+                        <NavbarLink  > <router-link class="p-2 "  to="/about">About</router-link></NavbarLink>
+                        <NavbarLink ><router-link class="p-2"  to="/admin/login">Admin</router-link></NavbarLink>
+                       
+                    </NavbarCollapse>
+                </template>
+            </Navbar>
         </header>
     </div>
 </template>
 
-<script lang="ts">
+<script setup lang="ts">
+import { Navbar, /* NavbarLogo ,*/ NavbarCollapse, NavbarLink } from 'flowbite-vue'
 
-import { ref } from 'vue';
+import { useRoute } from 'vue-router'
 
- export default {
-    data() {
-        return {
-           // get current routes selected 
-        }
-    },
+// get current route selected
+const currentRoute = useRoute()
 
-    // if iem is the current route change color 
-    // current selected Item with ref 
+// check a current route name 
+const isActiveRoute = (routeName: string) => {
+    return currentRoute.name === routeName
+}
 
-    methods: {
-        
-    },
-
- }
 </script>
