@@ -2,27 +2,9 @@
 <template>
     <div class="w-full h-full">
 
-        <Sidebar 
-            width="250px"
-            position="fixed"
-            items="[
-                {
-                    name: 'Dashboard',
-                    href: '/',
-                    icon: 'home',
-                  },
-                  {
-                    name: 'Users',
-                    href: '/users',
-                    icon: 'users',
-                  },
-                  {
-                    name: 'Settings',
-                    href: '/settings',
-                    icon: 'cog',
-                  },
-            ]"
-        > </Sidebar>
+   
+    <!--Sidebar with Dimmer -->
+    <Sidebar />
        
         <div class="flex justify-center">
             <h1 class="text-green-700"> {{ title }} </h1>
@@ -31,7 +13,13 @@
     </div>
 </template>
 
-<script>
-import { Sidebar }  from 'flowbite-vue'
+<script setup lang="ts" >
+import Sidebar from '../../components/admin/adminSidebar.vue'
+
+const title = 'Admin Home Page'
 
 </script>
+
+<style scoped>
+
+</style>

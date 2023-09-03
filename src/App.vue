@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import headerComponent from './components/clientHeaderComponent.vue';
-import adminHeaderComponent from './components/adminHeaderComponent.vue';
+import adminHeaderComponent from './components/admin/adminHeaderComponent.vue';
 // useRoute
 import { useRoute } from 'vue-router';
 import { computed, watch, ref } from 'vue';
