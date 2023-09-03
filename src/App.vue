@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import headerComponent from './components/headerComponent.vue';
+import headerComponent from './components/clientHeaderComponent.vue';
 import adminHeaderComponent from './components/adminHeaderComponent.vue';
 // useRoute
 import { useRoute } from 'vue-router';

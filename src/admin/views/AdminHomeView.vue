@@ -1,6 +1,28 @@
 
 <template>
     <div class="w-full h-full">
+
+        <Sidebar 
+            width="250px"
+            position="fixed"
+            items="[
+                {
+                    name: 'Dashboard',
+                    href: '/',
+                    icon: 'home',
+                  },
+                  {
+                    name: 'Users',
+                    href: '/users',
+                    icon: 'users',
+                  },
+                  {
+                    name: 'Settings',
+                    href: '/settings',
+                    icon: 'cog',
+                  },
+            ]"
+        > </Sidebar>
        
         <div class="flex justify-center">
             <h1 class="text-green-700"> {{ title }} </h1>
@@ -10,12 +32,6 @@
 </template>
 
 <script>
-export default {
-    data() {
-        return {
-            title: "Alhouda Admin Panel",
-            pageContent: "Alhouda is a Platforme for islamic courses",
-        }
-    }
-}
+import { Sidebar }  from 'flowbite-vue'
+
 </script>
