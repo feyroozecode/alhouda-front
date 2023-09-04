@@ -16,7 +16,6 @@ const currentRoute = computed(() => {
   return route.path.includes('admin') && !route.path.includes('login');
 })
 
-
 // show current route all time is changed 
 watch(currentRoute, (value) => {
   isAdminRoute.value = value;

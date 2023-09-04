@@ -34,13 +34,17 @@
         class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-green-600 text-white"
       >
         <i class="bi bi-house-door-fill"></i>
-        <span class="text-[15px] ml-4 text-green-200 font-bold">Home</span>
+        <span class="text-[15px] ml-4 text-green-200 font-bold">
+          <router-link to="/admin">Home</router-link>
+        </span>
       </div>
       <div
         class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-green-600 text-white"
       >
         <i class="bi bi-bookmark-fill"></i>
-        <span class="text-[15px] ml-4 text-green-200 font-bold">Bookmark</span>
+        <span class="text-[15px] ml-4 text-green-200 font-bold">
+          <router-link to="/admin/about">About Admin</router-link>
+        </span>
       </div>
       <div class="my-4 bg-green-600 h-[1px]"></div>
       <div
@@ -51,7 +55,7 @@
         <div class="flex justify-between w-full items-center">
           <span class="text-[15px] ml-4 text-green-200 font-bold">Chatbox</span>
           <span class="text-sm" :class="{ 'rotate-180': isDropdownOpen }">
-            <i class="bi bi-chevron-down"></i>
+            <i class="bi bi-chevron-down" ></i>
           </span>
         </div>
       </div>
@@ -101,6 +105,3 @@ dropdown();
 <style scoped>
 /* Add your custom styles here */
 </style>
-```
-
-In this script setup, I've used the Composition API to define the `isDropdownOpen`, `dropdown`, and `openSidebar` variables and functions. The functionality remains the same as in your original object-based setup.

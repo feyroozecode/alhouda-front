@@ -13,7 +13,6 @@
                         <NavbarLink > <router-link class="p-2 "  to="/">Home</router-link>  </NavbarLink>
                         <NavbarLink  > <router-link class="p-2 "  to="/about">About</router-link></NavbarLink>
                         <NavbarLink ><router-link class="p-2"  to="/admin/login">Admin</router-link></NavbarLink>
-                       
                     </NavbarCollapse>
                 </template>
             </Navbar>
