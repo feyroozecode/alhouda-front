@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 import HomeView       from  '@/client/views/HomeView.vue'
 import AboutView      from  '@/client/views/AboutView.vue'
+import BaseLayout     from  '@/layouts/base_layout.vue'
 
 import AdminHomeView  from  '@/admin/views/AdminHomeView.vue'
 import AdminAboutView from  '@/admin/views/AdminAboutView.vue'
@@ -14,16 +15,28 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: HomeView
+      component: () => BaseLayout,
+      children: [
+        {
+          path: '',
+          name: 'home',
+          components: {
+            mainContent: () => HomeView
+          }
+        },
+        {
+          path: 'about',
+          name: 'about',
+          // route level code-splitting
+          // this generates a separate chunk (About.[hash].js) for this route
+          // which is lazy-loaded when the route is visited.
+          components: {
+            mainContent: () => AboutView
+          }
+        },
+      ]
     },
-    {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => AboutView
-    },
+   
     {
       path: '/admin',
       name: 'admin',
@@ -46,7 +59,9 @@ const router = createRouter({
         {
           path: 'login',
           name: 'admin-login',
-          component: AdminLoginView
+          components: {
+            mainContent: () => AdminLoginView
+          } 
         }
       ]
     },
