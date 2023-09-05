@@ -21,17 +21,5 @@ import { computed, watch, ref } from 'vue';
 const isLoginRoute = ref(false);
 const route = useRoute();
 
-// check if is content is login  using computed and hide a sidbar on login page 
-const currentRoute = computed(() => {
-  return !route.path.includes('/admin/login');
-})
-
-// show current route all time is changed 
-watch(currentRoute, (value) => {
-  isLoginRoute.value = value;
-  console.log(isLoginRoute.value);
-})
-// hide a sidebar if route is login 
-
 
 </script>

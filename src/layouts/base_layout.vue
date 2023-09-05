@@ -1,7 +1,8 @@
 <script setup lang="ts">
-import headerComponent from '@/components/clientHeaderComponent.vue';
-import adminHeaderComponent from '@/components/admin/adminHeaderComponent.vue';
-// useRoute
+import headerComponent       from '@/components/clientHeaderComponent.vue';
+import adminHeaderComponent  from '@/components/admin/adminHeaderComponent.vue';
+import leftSideBar           from '@/components/left_sidebar.vue'
+import rightSidebar        from '@/components/right_sidebar.vue';
 import { useRoute } from 'vue-router';
 import { computed, watch, ref } from 'vue';
 
@@ -23,14 +24,23 @@ watch(currentRoute, (value) => {
 </script>
 
 <template>
-  <div class="w-full h-full">
+  <div class="w-full h-screen">
   
     <headerComponent v-if="!isAdminRoute" />  <!-- show client header if is not admin -->
     
     <adminHeaderComponent v-if="isAdminRoute" />  <!-- show admin header if is admin -->
    
-    <router-view name="mainContent" />
-    
+    <div class="flex h-screen bg-gray-100 p-12 ">
+
+      <leftSideBar v-if="!isAdminRoute" /> <!-- show admin sidebar if is admin -->
+
+      <main class="flex-1 p-4 ml-5 bg-white rounded shadow-md  ">
+        <router-view name="mainContent" />
+      </main>
+
+      <rightSidebar v-if="!isAdminRoute" />
+
+    </div>
   </div>
 </template>
 
