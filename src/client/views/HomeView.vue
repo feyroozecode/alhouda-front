@@ -1,5 +1,6 @@
 <script setup lang="ts">
-  import { ref } from 'vue'
+import { ref } from 'vue'
+import PostCard from '@/components/post_card.vue'
 
   const posts = ref([
     {
@@ -12,6 +13,7 @@
       mediaUrl:  "youtube.com/",
       mediaType : "video",
       mediaLength: "1:30:00",
+      thumbnailUrl: "https://i.ytimg.com/vi/3ZqWYRQnJZM/maxresdefault.jpg"
     },
     
     {
@@ -24,17 +26,19 @@
       mediaUrl:  "youtube.com/",
       mediaType : "video",
       mediaLength: "1:30:00",
+      thumbnailUrl: "https://i.ytimg.com/vi/3ZqWYRQnJZM/maxresdefault.jpg"
     },
     {
       "id": "3",
-      title: " Khutba Jumaa - Sunnah ",
+      title: " Arbaouna Hadith ",
       description: "Khutba Juma'a Djoumaat mosque Uthman bin Affane ",
-      scholar: "Abdul Aziz Al Fawzan",
+      scholar: "Abdul ",
       category: "Kjutba | Sermont",
       date : "07-09-2023",
       mediaUrl:  "youtube.com/",
       mediaType : "video",
       mediaLength: "1:30:00",
+      thumbnailUrl: "https://i.ytimg.com/vi/3ZqWYRQnJZM/maxresdefault.jpg"
     },
     {
       "id": "4",
@@ -46,6 +50,7 @@
       mediaUrl:  "youtube.com/",
       mediaType : "video",
       mediaLength: "1:30:00",
+      thumbnailUrl: "https://i.ytimg.com/vi/3ZqWYRQnJZM/maxresdefault.jpg"
     },
 
   ])
@@ -53,30 +58,21 @@
 </script>
 
 <template>
-  <main class="pt-8 pl-2 pr-2">
+  <main class="pt-8">
     <div class="justify-center text-xl w-full">
     <ul>
       <li v-for="post in posts" :key="post.id"> 
        
-          <div class="bg-white rounded-md shadow-md m-4 card mb-4">
-            <div class="card-body">
-              <h2 class="card-title">{{ post.title }}</h2>
-              <p class="card-text">{{ post.description }}</p>
-              <p class="card-text">
-                <small>
-                  By <a href="#">{{ post.scholar }}</a>,
-                  <time datetime="{{ date }}">{{ post.date }}</time>
-                </small>
-              </p>
-             <!--
-               <video class="card-img-top" src="{{ post.mediaUrl }}" controls></video>
-             -->
-            
-            </div>
-          </div>
-
-      
-
+        <PostCard
+          :title="post.title"
+          :description="post.description"
+          :scholar="post.scholar"
+          :category="post.category"
+          :date="post.date"
+          :mediaUrl="post.mediaUrl"
+          :mediaType="post.mediaType"
+          :mediaLength="post.mediaLength"
+          :thumbnailUrl="post.thumbnailUrl" />
       </li>
     </ul>
     </div>

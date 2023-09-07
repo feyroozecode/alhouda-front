@@ -24,17 +24,17 @@ watch(currentRoute, (value) => {
 </script>
 
 <template>
-  <div class="w-full h-screen">
+  <div class="w-full h-auto">
   
     <headerComponent v-if="!isAdminRoute" />  <!-- show client header if is not admin -->
     
     <adminHeaderComponent v-if="isAdminRoute" />  <!-- show admin header if is admin -->
    
-    <div class="flex h-screen bg-gray-100 p-2">
+    <div class="flex h-screen bg-gray-100 p-1">
 
       <leftSideBar v-if="!isAdminRoute" /> <!-- show admin sidebar if is admin -->
 
-      <main class="flex-1 p-4 ml-5 rounded  ">
+      <main class="flex-1 rounded ">
         <router-view name="mainContent" />
       </main>
 
