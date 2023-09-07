@@ -4,9 +4,9 @@
 
             <Navbar>
                 <template #logo>
-                  
+
                     <a href="/" class="text-xl font-weight-700"> Alhouda</a>
-                  
+
                 </template>
                 <template #default={isShowMenu}>
                     <NavbarCollapse :isShowMenu="isShowMenu">

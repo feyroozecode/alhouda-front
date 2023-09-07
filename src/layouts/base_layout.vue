@@ -30,11 +30,11 @@ watch(currentRoute, (value) => {
     
     <adminHeaderComponent v-if="isAdminRoute" />  <!-- show admin header if is admin -->
    
-    <div class="flex h-screen bg-gray-100 p-12 ">
+    <div class="flex h-screen bg-gray-100 p-2">
 
       <leftSideBar v-if="!isAdminRoute" /> <!-- show admin sidebar if is admin -->
 
-      <main class="flex-1 p-4 ml-5 bg-white rounded shadow-md  ">
+      <main class="flex-1 p-4 ml-5 rounded  ">
         <router-view name="mainContent" />
       </main>
 

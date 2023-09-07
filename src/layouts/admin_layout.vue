@@ -19,7 +19,5 @@ import { computed, watch, ref } from 'vue';
 
 // current selected Item with ref and method to get current route path 
 const isLoginRoute = ref(false);
-const route = useRoute();
-
 
 </script>
