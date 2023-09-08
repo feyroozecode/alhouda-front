@@ -34,7 +34,7 @@ watch(currentRoute, (value) => {
 
       <leftSideBar v-if="!isAdminRoute" /> <!-- show admin sidebar if is admin -->
 
-      <main class="flex-1 rounded ">
+      <main class="flex-1 rounded  ">
         <router-view name="mainContent" />
       </main>
 

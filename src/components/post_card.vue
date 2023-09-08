@@ -20,7 +20,7 @@ const expanded: any = ref(false);
 </script>
 
 <template>
-    <div class="bg-white mb-4">
+    <div class="bg-white shadow-sm mb-4 ">
      <!-- Top Header -->
     <div class="flex justify-between items-center px-6 py-4 bg-white border-b">
       <!-- Author Name -->
