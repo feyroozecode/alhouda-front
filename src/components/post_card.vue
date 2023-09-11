@@ -27,13 +27,13 @@ const expanded: any = ref(false);
       <div class="font-semibold text-lg">{{ scholar }}</div>
       
       <!-- Close/Expand Button -->
-      <button class="text-gray-600 hover:text-gray-800 focus:outline-none">
+      <button class="text-gray-600 text-sm hover:text-gray-800 focus:outline-none">
         <!-- You can use an icon like "X" or "+" here -->
         {{ expanded ? 'Close' : 'Expand' }}
       </button>
     </div>
     
-    <!-- Media (Video or Audio)
+    <!-- Media (Video or Audio) -->
     <div class="relative">
       <img
         :src="thumbnailUrl"
@@ -44,7 +44,7 @@ const expanded: any = ref(false);
         {{ mediaType === 'video' ? 'Video' : 'Audio' }}
       </div>
     </div>
-     -->
+     
     
     <!-- Content -->
     <div class="px-6 py-4">
@@ -60,26 +60,24 @@ const expanded: any = ref(false);
     
         <!-- Author, Category, and Date -->
         <div class="px-6 py-2">
+         
           <p class="text-sm text-gray-600">
-            <span class="font-semibold">Author:</span> {{ scholar }}
+            <span class="font-semibold">Category:</span> {{ category }} | 
+            <span class="font-semibold">Date:</span> {{ date }}         |
+            <span class="font-semibold">Length:</span> {{ mediaLength }}
           </p>
-          <p class="text-sm text-gray-600">
-            <span class="font-semibold">Category:</span> {{ category }}
-          </p>
-          <p class="text-sm text-gray-600">
-            <span class="font-semibold">Date:</span> {{ date }}
-          </p>
+       
         </div>
         
         <!-- Media Length -->
-        <div class="px-6 py-2">
+        <div class="px-6 ">
           <p class="text-sm text-gray-600">
-            <span class="font-semibold">Media Length:</span> {{ mediaLength }}
+          
           </p>
         </div>
         
         <!-- Social Buttons -->
-        <div class="px-6 py-4 flex items-center space-x-4">
+        <div class="px-6 py-2 flex items-center space-x-4">
           <!-- Add social buttons here, e.g., Facebook, Twitter, LinkedIn, etc. -->
           <button class="text-gray-600 hover:text-blue-500 focus:outline-none">
             <!-- Add a social icon, e.g., Facebook icon -->
