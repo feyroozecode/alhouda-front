@@ -1,5 +1,9 @@
 {
   "files": [],
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "baseUrl": "./src/"
+  },
   "references": [
     {
       "path": "./tsconfig.node.json"
