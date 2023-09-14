@@ -8,7 +8,8 @@
     "src/**/*.tsx",
     "src/**/*.vue",
     "src/client/**/**",
-    "src/admin/**/**"
+    "src/admin/**/**",
+    "src/data/*.ts"
   ],
   "exclude": ["src/**/__tests__/*"],
   "compilerOptions": {
