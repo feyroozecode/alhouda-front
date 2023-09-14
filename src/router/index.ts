@@ -3,7 +3,6 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView       from  '@/client/views/HomeView.vue'
 import AboutView      from  '@/client/views/AboutView.vue'
 import BaseLayout     from  '@/layouts/base_layout.vue'
-
 import AdminHomeView  from  '@/admin/views/AdminHomeView.vue'
 import AdminAboutView from  '@/admin/views/AdminAboutView.vue'
 import AdminLoginView from  '@/admin/views/AdminLoginView.vue'

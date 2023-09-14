@@ -8,7 +8,7 @@
         <!-- Sidebar -->
         <aside class="w-48 text-gray-700 p-4">
             <!-- Sidebar Header -->
-            <div class="text-xl  font-semibold"></div>
+            <div class="text-xl font-semibold"></div>
             
             <!-- Category Links -->
             <ul class="mt-4">

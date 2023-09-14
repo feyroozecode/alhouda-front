@@ -59,7 +59,7 @@ import PostCard from '@/components/post_card.vue'
 
 <template>
   <main class="pt-8">
-    <div class="justify-center text-xl w-full">
+    <div class="justify-center text-xl w-full ">
     <ul>
       <li v-for="post in posts" :key="post.id"> 
        
@@ -76,10 +76,6 @@ import PostCard from '@/components/post_card.vue'
       </li>
     </ul>
     </div>
-   
-       
-        
-       
 
   </main>
 </template>
