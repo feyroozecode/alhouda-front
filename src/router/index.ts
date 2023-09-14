@@ -6,6 +6,7 @@ import BaseLayout     from  '@/layouts/base_layout.vue'
 import AdminHomeView  from  '@/admin/views/AdminHomeView.vue'
 import AdminAboutView from  '@/admin/views/AdminAboutView.vue'
 import AdminLoginView from  '@/admin/views/AdminLoginView.vue'
+import AdminUserList  from  '@/admin/views/AdminUserListView.vue'
 import AdminLayout    from  '@/layouts/admin_layout.vue'
 
 const router = createRouter({
@@ -61,7 +62,14 @@ const router = createRouter({
           components: {
             mainContent: () => AdminLoginView
           } 
-        }
+        },
+        {
+          path: 'users',
+          name: 'admin-users',
+          components: {
+            mainContent: () => AdminUserList
+          } 
+        },
       ]
     },
    

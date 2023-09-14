@@ -53,7 +53,7 @@
       >
         <i class="bi bi-chat-left-text-fill"></i>
         <div class="flex justify-between w-full items-center">
-          <span class="text-[15px] ml-4 text-green-200 font-bold">Chatbox</span>
+          <span class="text-[15px] ml-4 text-green-200 font-bold">User</span>
           <span class="text-sm" :class="{ 'rotate-180': isDropdownOpen }">
             <i class="bi bi-chevron-down" ></i>
           </span>
@@ -64,7 +64,7 @@
         :class="{ hidden: isDropdownOpen }"
       >
         <h1 class="cursor-pointer p-2 hover:bg-green-600 rounded-md mt-1">
-          Social
+         <router-link to="/admin/users"> Utilisateurs  </router-link>
         </h1>
         <h1 class="cursor-pointer p-2 hover:bg-green-600 rounded-md mt-1">
           Personal
