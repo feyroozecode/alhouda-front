@@ -11,7 +11,6 @@ onMounted(() => {
 
 // fetch a user list from server 
 const users = ref([])
-
 const fetchAllUsers: any = () => {
     axios.get( GET_ALL_USERS )
         .then((response: any) => {

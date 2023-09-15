@@ -28,8 +28,11 @@ const expanded: any = ref(false);
       
       <!-- Close/Expand Button -->
       <button class="text-gray-600 text-sm hover:text-gray-800 focus:outline-none">
-        <!-- You can use an icon like "X" or "+" here -->
-        {{ expanded ? 'Close' : 'Expand' }}
+        <!-- You can use an icon like "X" or "+" here
+         {{ expanded ? 'Close' : 'Expand' }}
+         -->
+       
+         <font-awesome-icon icon="fa-solid fa-user-secret" />
       </button>
     </div>
     
