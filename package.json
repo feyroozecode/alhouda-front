@@ -12,14 +12,12 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^6.4.2",
-    "@fortawesome/free-regular-svg-icons": "^6.4.2",
-    "@fortawesome/free-solid-svg-icons": "^6.4.2",
-    "@fortawesome/vue-fontawesome": "^3.0.3",
     "axios": "^1.5.0",
+    "feather-icons": "^4.29.1",
     "flowbite": "^1.8.1",
     "flowbite-vue": "^0.0.17-next.2",
     "vue": "^3.3.4",
+    "vue-feather": "^2.0.0",
     "vue-router": "^4.2.4",
     "vuetify": "^3.3.16"
   },

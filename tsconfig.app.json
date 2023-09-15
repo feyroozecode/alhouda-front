@@ -9,7 +9,8 @@
     "src/**/*.vue",
     "src/client/**/**",
     "src/admin/**/**",
-    "src/data/*.ts"
+    "src/data/*.ts",
+    "src/models/*.ts"
   ],
   "exclude": ["src/**/__tests__/*"],
   "compilerOptions": {
@@ -18,7 +19,8 @@
     "paths": {
       "@/*": [
         "./src/*",
-        "./src/admin/*"
+        "./src/admin/*",
+        "./src/models/*"
       ]
     }
   },

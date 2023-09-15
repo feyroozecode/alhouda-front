@@ -1,20 +1,25 @@
 
 <script setup lang="ts">
-import { ref, onMounted }  from  'vue'
-import { Table, TableHead, TableBody, TableRow, TableHeadCell, TableCell} from 'flowbite-vue'
-import    axios  from 'axios'
-import { GET_ALL_USERS } from '@/data/static';
+import { ref, onMounted }       from  'vue'
+import 
+    { Table, TableHead, 
+      TableBody, TableRow, 
+      TableHeadCell, TableCell
+      }                         from 'flowbite-vue'
+import   axios                  from 'axios'
+import { GET_ALL_USERS }        from '@/data/static';
+import  { User }                from '../../models/user.model.ts'
 
 onMounted(() => {
     fetchAllUsers()
 })
 
 // fetch a user list from server 
-const users = ref([])
+const users = ref<User[]>([])
 const fetchAllUsers: any = () => {
     axios.get( GET_ALL_USERS )
         .then((response: any) => {
-            users.value = response.data.users
+            users.value = response.data.users as User[]
             console.table(  users.value )
         })
         .catch((error: any) => {

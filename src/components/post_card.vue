@@ -1,6 +1,9 @@
 
 <script setup lang="ts">
 import { ref, defineProps  } from 'vue'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faAnglesDown , faAngleUp} from '@fortawesome/free-solid-svg-icons';
 
 const props = defineProps({
     title: String,
@@ -31,9 +34,11 @@ const expanded: any = ref(false);
         <!-- You can use an icon like "X" or "+" here
          {{ expanded ? 'Close' : 'Expand' }}
          -->
-       
-         <font-awesome-icon icon="fa-solid fa-user-secret" />
-      </button>
+        
+         <font-awesome-icon v-if="expanded" icon="fa-solid fa-angle-down" />
+         
+         <font-awesome-icon  v-if="!expanded" icon="fa-angle-up"  />
+        </button>
     </div>
     
     <!-- Media (Video or Audio) -->
