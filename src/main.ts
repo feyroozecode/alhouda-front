@@ -19,7 +19,6 @@ const vuetify = createVuetify({
     directives
 })
 
-
 //library.add(FontAwesomeIcon)
 
 app.use(router)

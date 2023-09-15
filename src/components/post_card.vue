@@ -1,10 +1,6 @@
 
 <script setup lang="ts">
 import { ref, defineProps  } from 'vue'
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { faAnglesDown , faAngleUp} from '@fortawesome/free-solid-svg-icons';
-
 const props = defineProps({
     title: String,
     description: String,
@@ -35,9 +31,22 @@ const expanded: any = ref(false);
          {{ expanded ? 'Close' : 'Expand' }}
          -->
         
-         <font-awesome-icon v-if="expanded" icon="fa-solid fa-angle-down" />
-         
-         <font-awesome-icon  v-if="!expanded" icon="fa-angle-up"  />
+         <!-- Chevron down -->
+         <div v-if="expanded">
+          <svg viewBox="0 0 16 16">
+            <path fill="currentColor" d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 0-.708z"/>
+          </svg>
+         </div>
+
+         <!-- Chevron up -->
+         <div v-if="!expanded">
+            <svg viewBox="0 0 16 16">
+            <path fill="currentColor" d="M7.646 11.354a.5.5 0 0 1 .708 0l3-3a.5.5 0 0 1 .708.708L8 12.293l2.646-2.647a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 0-.708z"/>
+          </svg>
+         </div>
+
+    
+        
         </button>
     </div>
     
@@ -111,3 +120,11 @@ const expanded: any = ref(false);
        
     </div>
 </template>
+
+<style scoped>
+svg {
+  fill: gray;
+  width: 48px;
+  height: 48px;
+  }
+</style>
