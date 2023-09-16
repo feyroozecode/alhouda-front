@@ -41,8 +41,8 @@ const router = createRouter({
     {
       path: '/admin',
       name: 'admin',
-      component:  () => {
-        return async () => await AdminLayout
+      component: async () => {
+        return AdminLayout
       },
       children: [
         {
