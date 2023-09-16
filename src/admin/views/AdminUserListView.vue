@@ -5,10 +5,10 @@ import
     { Table, TableHead, 
       TableBody, TableRow, 
       TableHeadCell, TableCell
-      }                         from 'flowbite-vue'
+    }                           from 'flowbite-vue'
 import   axios                  from 'axios'
 import { GET_ALL_USERS }        from '@/data/static';
-import  { User }                from '@/models/user.model'
+import {  User }                from '@/models/user.model'
 
 onMounted(() => {
     fetchAllUsers()

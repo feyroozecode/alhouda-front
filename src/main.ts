@@ -10,8 +10,6 @@ import { createVuetify } from 'vuetify'
 import * as components from 'vuetify/components'
 import * as directives from 'vuetify/directives'
 
-import VueFeather from 'vue-feather';
-
 const app = createApp(App)
 
 const vuetify = createVuetify({
@@ -19,9 +17,8 @@ const vuetify = createVuetify({
     directives
 })
 
-//library.add(FontAwesomeIcon)
+app.component('App', App)
 
 app.use(router)
 app.use(vuetify)
-app.component(VueFeather.name, VueFeather)
 app.mount('#app')

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import PostCard from '@/components/post_card.vue'
+import PostCard from '@/components/post_card.vue' 
 
   const posts = ref([
     {

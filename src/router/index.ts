@@ -1,5 +1,4 @@
 import { createRouter, createWebHistory } from 'vue-router'
-
 import HomeView       from  '@/client/views/HomeView.vue'
 import AboutView      from  '@/client/views/AboutView.vue'
 import BaseLayout     from  '@/layouts/base_layout.vue'
@@ -15,13 +14,15 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: () => BaseLayout,
+      component: async () => {
+        return BaseLayout
+      },
       children: [
         {
           path: '',
           name: 'home',
           components: {
-            mainContent: () => HomeView
+            mainContent: async () => HomeView
           }
         },
         {
@@ -40,7 +41,9 @@ const router = createRouter({
     {
       path: '/admin',
       name: 'admin',
-      component: () => AdminLayout,
+      component:  () => {
+        return async () => await AdminLayout
+      },
       children: [
         {
           path: '', // admin base route /admin

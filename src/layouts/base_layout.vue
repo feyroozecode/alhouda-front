@@ -4,7 +4,17 @@ import adminHeaderComponent  from '@/components/admin/adminHeaderComponent.vue';
 import leftSideBar           from '@/components/left_sidebar.vue'
 import rightSidebar        from '@/components/right_sidebar.vue';
 import { useRoute } from 'vue-router';
-import { computed, watch, ref } from 'vue';
+import { computed, watch, ref, defineComponent } from 'vue';
+
+const App = defineComponent({
+  setup(){
+    return {
+      compilerOptions: {
+        isCustumElement: true
+      }
+    }
+  }
+})
 
 // current selected Item with ref and method to get current route path 
 const isAdminRoute = ref(false);
@@ -17,8 +27,10 @@ const currentRoute = computed(() => {
 
 // show current route all time is changed 
 watch(currentRoute, (value) => {
-  isAdminRoute.value = value;
-  console.log(isAdminRoute.value);
+  if( value != isAdminRoute.value ) {
+    isAdminRoute.value = value;
+    console.log(isAdminRoute.value);
+  }
 })
 
 </script>
