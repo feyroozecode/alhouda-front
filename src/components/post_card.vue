@@ -33,19 +33,13 @@ const expanded: any = ref(false);
         
          <!-- Chevron down -->
          <div v-if="expanded">
-          <svg viewBox="0 0 16 16">
-            <path fill="currentColor" d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 0-.708z"/>
-          </svg>
+            <img src="../assets/icons/expand_more.png" alt="expand_up" />
          </div>
 
          <!-- Chevron up -->
          <div v-if="!expanded">
-            <svg viewBox="0 0 16 16">
-            <path fill="currentColor" d="M7.646 11.354a.5.5 0 0 1 .708 0l3-3a.5.5 0 0 1 .708.708L8 12.293l2.646-2.647a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 0-.708z"/>
-          </svg>
+            <img src="@/assets/icons/expand_less.png" alt="expand_down" />
          </div>
-
-    
         
         </button>
     </div>

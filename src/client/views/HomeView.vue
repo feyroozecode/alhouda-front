@@ -2,58 +2,57 @@
 import { ref } from 'vue'
 import PostCard from '@/components/post_card.vue' 
 
-  const posts = ref([
-    {
-      "id": "1",
-      title: " Khutba Jumaa - Sunnah ",
-      description: "Khutba Juma'a Djoumaat mosque Uthman bin Affane ",
-      scholar: "Abdul Aziz Al Fawzan",
-      category: "Kjutba | Sermont",
-      date : "07-09-2023",
-      mediaUrl:  "youtube.com/",
-      mediaType : "video",
-      mediaLength: "1:30:00",
-      thumbnailUrl: "https://i.ytimg.com/vi/3ZqWYRQnJZM/maxresdefault.jpg"
-    },
-    
-    {
-      "id": "2",
-      title: "Kitabu Tawhid - Aqidat ",
-      description: "Khutba Juma'a Djoumaat mosque Uthman bin Affane ",
-      scholar: "Abdul Aziz Al Fawzan",
-      category: "Kjutba | Sermont",
-      date : "07-09-2023",
-      mediaUrl:  "youtube.com/",
-      mediaType : "video",
-      mediaLength: "1:30:00",
-      thumbnailUrl: "https://i.ytimg.com/vi/3ZqWYRQnJZM/maxresdefault.jpg"
-    },
-    {
-      "id": "3",
-      title: " Arbaouna Hadith ",
-      description: "Khutba Juma'a Djoumaat mosque Uthman bin Affane ",
-      scholar: "Abdul ",
-      category: "Kjutba | Sermont",
-      date : "07-09-2023",
-      mediaUrl:  "youtube.com/",
-      mediaType : "video",
-      mediaLength: "1:30:00",
-      thumbnailUrl: "https://i.ytimg.com/vi/3ZqWYRQnJZM/maxresdefault.jpg"
-    },
-    {
-      "id": "4",
-      title: " Khutba Jumaa - Sunnah ",
-      description: "Khutba Juma'a Djoumaat mosque Uthman bin Affane ",
-      scholar: "Abdul Aziz Al Fawzan",
-      category: "Kjutba | Sermont",
-      date : "07-09-2023",
-      mediaUrl:  "youtube.com/",
-      mediaType : "video",
-      mediaLength: "1:30:00",
-      thumbnailUrl: "https://i.ytimg.com/vi/3ZqWYRQnJZM/maxresdefault.jpg"
-    },
-
-  ])
+     const posts = ref([
+        {
+          "id": "1",
+          title: " Khutba Jumaa - Sunnah ",
+          description: "Khutba Juma'a Djoumaat mosque Uthman bin Affane ",
+          scholar: "Abdul Aziz Al Fawzan",
+          category: "Kjutba | Sermont",
+          date : "07-09-2023",
+          mediaUrl:  "youtube.com/",
+          mediaType : "video",
+          mediaLength: "1:30:00",
+          thumbnailUrl: "https://i.ytimg.com/vi/3ZqWYRQnJZM/maxresdefault.jpg"
+        },
+        
+        {
+          "id": "2",
+          title: "Kitabu Tawhid - Aqidat ",
+          description: "Khutba Juma'a Djoumaat mosque Uthman bin Affane ",
+          scholar: "Abdul Aziz Al Fawzan",
+          category: "Kjutba | Sermont",
+          date : "07-09-2023",
+          mediaUrl:  "youtube.com/",
+          mediaType : "video",
+          mediaLength: "1:30:00",
+          thumbnailUrl: "https://i.ytimg.com/vi/3ZqWYRQnJZM/maxresdefault.jpg"
+        },
+        {
+          "id": "3",
+          title: " Arbaouna Hadith ",
+          description: "Khutba Juma'a Djoumaat mosque Uthman bin Affane ",
+          scholar: "Abdul ",
+          category: "Kjutba | Sermont",
+          date : "07-09-2023",
+          mediaUrl:  "youtube.com/",
+          mediaType : "video",
+          mediaLength: "1:30:00",
+          thumbnailUrl: "https://i.ytimg.com/vi/3ZqWYRQnJZM/maxresdefault.jpg"
+        },
+        {
+          "id": "4",
+          title: " Khutba Jumaa - Sunnah ",
+          description: "Khutba Juma'a Djoumaat mosque Uthman bin Affane ",
+          scholar: "Abdul Aziz Al Fawzan",
+          category: "Kjutba | Sermont",
+          date : "07-09-2023",
+          mediaUrl:  "youtube.com/",
+          mediaType : "video",
+          mediaLength: "1:30:00",
+          thumbnailUrl: "https://i.ytimg.com/vi/3ZqWYRQnJZM/maxresdefault.jpg"
+        },
+      ])
 
 </script>
 

@@ -2,7 +2,8 @@
 <script setup lang="ts">
 import { ref, onMounted }       from  'vue'
 import 
-    { Table, TableHead, 
+    { 
+      Table, TableHead, 
       TableBody, TableRow, 
       TableHeadCell, TableCell
     }                           from 'flowbite-vue'
@@ -39,8 +40,8 @@ const fetchAllUsers: any = () => {
                 <table-head-cell>Roles</table-head-cell>
             </table-head>
             <table-body>
-                <table-row v-for="user in users " :key="user._id">
-                    <table-cell> {{ user._id }} </table-cell>
+                <table-row v-for="user in users " :key="user.userId">
+                    <table-cell> {{ user.userId }} </table-cell>
                     <table-cell> {{ user.username }} </table-cell>
                     <table-cell> {{ user.email }} </table-cell>
                     <table-cell> {{ user.role }} </table-cell>
