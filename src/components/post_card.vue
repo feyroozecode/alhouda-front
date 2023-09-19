@@ -1,6 +1,8 @@
 
 <script setup lang="ts">
 import { ref, defineProps  } from 'vue'
+import { Accordion, AccordionPanel, AccordionHeader, AccordionContent } from 'flowbite-vue'
+
 const props = defineProps({
     title: String,
     description: String,
@@ -20,31 +22,35 @@ const expanded: any = ref(false);
 
 <template>
     <div class="bg-white shadow-sm mb-4 ">
-     <!-- Top Header -->
-    <div class="flex justify-between items-center px-6 py-4 bg-white border-b">
-      <!-- Author Name -->
-      <div class="font-semibold text-lg">{{ scholar }}</div>
-      
-      <!-- Close/Expand Button -->
-      <button class="text-gray-600 text-sm hover:text-gray-800 focus:outline-none">
-        <!-- You can use an icon like "X" or "+" here
-         {{ expanded ? 'Close' : 'Expand' }}
-         -->
-        
-         <!-- Chevron down -->
-         <div v-if="expanded">
-            <img src="../assets/icons/expand_more.png" alt="expand_up" />
-         </div>
-
-         <!-- Chevron up -->
-         <div v-if="!expanded">
-            <img src="@/assets/icons/expand_less.png" alt="expand_down" />
-         </div>
-        
-        </button>
-    </div>
     
-    <!-- Media (Video or Audio) -->
+      <accordion-panel>
+          <!-- Top Header -->
+          <accordion-header>
+        <div class="flex justify-between items-center px-6 py-4 bg-white border-b">
+          <!-- Author Name -->
+          <div class="font-semibold text-lg">{{ scholar }}</div>
+          <!-- Close/Expand Button -->
+          <button class="text-gray-600 text-sm hover:text-gray-800 focus:outline-none">
+            <!-- You can use an icon like "X" or "+" here
+            {{ expanded ? 'Close' : 'Expand' }}
+            -->
+            
+            <!-- Chevron down -->
+            <div v-if="expanded">
+                <img src="../assets/icons/expand_more.png" alt="expand_up" />
+            </div>
+
+            <!-- Chevron up -->
+            <div v-if="!expanded">
+                <img src="@/assets/icons/expand_less.png" alt="expand_down" />
+            </div>
+            
+            </button>
+        </div>
+        </accordion-header>
+
+      <accordion-content>
+                <!-- Media (Video or Audio) -->
     <div class="relative">
       <img
         :src="thumbnailUrl"
@@ -111,7 +117,11 @@ const expanded: any = ref(false);
         </div>
         
         <!-- Media URL (Link to video/audio) -->
-       
+      </accordion-content>
+   
+      </accordion-panel>
+   
+   
     </div>
 </template>
 
