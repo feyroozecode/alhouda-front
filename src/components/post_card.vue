@@ -21,11 +21,11 @@ const expanded: any = ref(false);
 </script>
 
 <template>
-    <div class="bg-white shadow-sm mb-4 ">
-    
+    <div class="">
+      <Accordion class="bg-white" always-open> 
       <accordion-panel>
           <!-- Top Header -->
-          <accordion-header>
+          <accordion-header class="bg-white">
         <div class="flex justify-between items-center px-6 py-4 bg-white border-b">
           <!-- Author Name -->
           <div class="font-semibold text-lg">{{ scholar }}</div>
@@ -35,16 +35,16 @@ const expanded: any = ref(false);
             {{ expanded ? 'Close' : 'Expand' }}
             -->
             
-            <!-- Chevron down -->
+            <!-- Chevron down
             <div v-if="expanded">
                 <img src="../assets/icons/expand_more.png" alt="expand_up" />
             </div>
-
-            <!-- Chevron up -->
+ -->
+            <!-- Chevron up 
             <div v-if="!expanded">
                 <img src="@/assets/icons/expand_less.png" alt="expand_down" />
             </div>
-            
+            -->
             </button>
         </div>
         </accordion-header>
@@ -120,7 +120,7 @@ const expanded: any = ref(false);
       </accordion-content>
    
       </accordion-panel>
-   
+      </Accordion>
    
     </div>
 </template>
