@@ -1,6 +1,43 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
+import  axios     from 'axios'
+import {Course}   from '@/models/course.model'
+import {Article } from '@/models/article.model'
 import PostCard from '@/components/post_card.vue' 
+import { GET_ALL_COURSES, GET_ALL_ARTICLES } from '../../../.history/src/data/static_20230921165705';
+
+
+onMounted(() => {
+     
+})
+  
+const courses = ref<Course[]>([]) ;
+const articles = ref<Article[]>([])
+  
+// fecth datas 
+const fetchCourses: any = () => {
+  axios.get( GET_ALL_COURSES ) 
+    .then( (response: any) => {
+       courses.value = response.data.courses as Course[]
+       console.table( courses.value )
+    } )
+    .catch ( (error: any) => {
+      console.error('Error fetching courses ', error)
+    } ) 
+} 
+
+const fetchArticles: any = () => {
+  axios.get( GET_ALL_ARTICLES ) 
+    .then( (response: any) => {
+       articles.value = response.data.courses as Course[]
+       console.table( articles.value )
+    } )
+    .catch ( (error: any) => {
+      console.error('Error fetching courses ', error)
+    } ) 
+} 
+
+
 
      const posts = ref([
         {
