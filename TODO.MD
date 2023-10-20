@@ -4,11 +4,12 @@
 
   #CLIENT PART 
 
-      TODO                           |      STATE            MAX DATE
+      TODO                             |      STATE            MAX DATE
      ----------------------       --------------     |  -------   
-     * Add a top header SAERCHBAR      |       DOING        |
-     * Create a Main content data      |       FINSHED      |
-     * Create a landing page Card      |       DOING        |
+     * Add a top header SAERCHBAR        |       IDEAs        |
+     * Create a Main content data        |       FINSHED      |
+     * Create a landing page Card        |       DOING        |
+     * Show a Backend Data ON HomePage   |       DOING        |   21/09/23
 
 
    ## TODO ALHOUDA-FRONT  

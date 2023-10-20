@@ -2,9 +2,14 @@
 import headerComponent       from '@/components/clientHeaderComponent.vue';
 import adminHeaderComponent  from '@/components/admin/adminHeaderComponent.vue';
 import leftSideBar           from '@/components/left_sidebar.vue'
-import rightSidebar        from '@/components/right_sidebar.vue';
-import { useRoute } from 'vue-router';
-import { computed, watch, ref, defineComponent } from 'vue';
+import rightSidebar          from '@/components/right_sidebar.vue';
+import { useRoute }          from 'vue-router';
+import {
+  computed, 
+  watch, 
+  ref, 
+  defineComponent 
+}                            from 'vue';
 
 const App = defineComponent({
   setup(){

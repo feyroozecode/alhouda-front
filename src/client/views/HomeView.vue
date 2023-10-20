@@ -4,8 +4,7 @@ import  axios     from 'axios'
 import {Course}   from '@/models/course.model'
 import {Article } from '@/models/article.model'
 import PostCard from '@/components/post_card.vue' 
-import { GET_ALL_COURSES, GET_ALL_ARTICLES } from '../../../.history/src/data/static_20230921165705';
-
+import { GET_ALL_COURSES, GET_ALL_ARTICLES } from '@/data/static'
 
 onMounted(() => {
      
@@ -37,7 +36,11 @@ const fetchArticles: any = () => {
     } ) 
 } 
 
-
+// combiines all data to show on landing pages on random on last added 
+const allCombined = () => {
+    // give a combiations of all differents parts 
+    
+}
 
      const posts = ref([
         {
