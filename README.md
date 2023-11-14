@@ -1,9 +1,11 @@
 # alhouda-front
 Alhouda Project Web FrontEnd 
-We are open for contribition 
+this only the Frontend , check the Backend in NodeJs+Typescript on : https://github.com/feyroozecode/alhouda-api
+
+We are open for contribition
 
 Project Details :
-This template should help get you started developing with Vue 3 in Vite.
+This is a Alhouda project en Client, développed in VueJs 3 with Composition Api.
 
 ## Recommended IDE Setup
 
