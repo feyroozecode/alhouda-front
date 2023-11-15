@@ -36,7 +36,7 @@ const fetchArticles: any = () => {
     } ) 
 } 
 
-// combiines all data to show on landing pages on random on last added 
+// combines all data to show on landing pages on random on last added 
 const allCombined = () => {
     // give a combiations of all differents parts 
     

@@ -19,13 +19,13 @@ const props = defineProps({
 
 <template>
     <div class="mt-5 mb-5">
-      <Accordion class="bg-white" always-open> 
+      <Accordion class="" always-open> 
      
        <!-- Top Header -->
       <accordion-panel>
          
-        <accordion-header class=" rounded-none ">
-        <div class="flex justify-between items-center border-b">
+        <accordion-header class="">
+        <div class="flex justify-between items-center ">
       
           <div class="font-semibold text-lg">{{ scholar }}</div>
         
@@ -45,7 +45,6 @@ const props = defineProps({
           {{ mediaType === 'video' ? 'Video' : 'Audio' }}
         </div>
       </div>
-      
       
       <!-- Content -->
       <div class="px-4 py-2">
