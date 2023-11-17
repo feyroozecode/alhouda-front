@@ -1,0 +1,7 @@
+name: Alhouda Front
+
+on:
+    push:
+        branches: [ main ]
+    pull_request:
+        branches : [ main ]
