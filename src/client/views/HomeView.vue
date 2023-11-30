@@ -97,10 +97,10 @@ const allCombined = () => {
 </script>
 
 <template>
-  <main class="pt-8">
+  <main class="pt-">
     <div class="justify-center text-xl w-full ">
     <ul>
-      <li v-for="post in posts" :key="post.id"> 
+      <li v-for="post in posts" :key="post.id" class="mb-15"> 
        
         <PostCard
           :title="post.title"

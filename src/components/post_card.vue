@@ -1,6 +1,5 @@
 
 <script setup lang="ts">
-import {  defineProps  } from 'vue'
 import { Accordion, AccordionPanel, AccordionHeader, AccordionContent } from 'flowbite-vue'
 
 const props = defineProps({
@@ -18,79 +17,79 @@ const props = defineProps({
 </script>
 
 <template>
-    <div class="mt-5 mb-5">
-      <Accordion class="" always-open> 
+    <div class="mt-5 mb-5 bg-white">
+      <Accordion  class="" always-open> 
      
-       <!-- Top Header -->
-      <accordion-panel>
-         
-        <accordion-header class="">
-        <div class="flex justify-between items-center ">
-      
-          <div class="font-semibold text-lg">{{ scholar }}</div>
+        <!-- Top Header -->
+        <accordion-panel>
+          
+          <accordion-header class="bg-white" >
+          <div class="flex justify-between items-center ">
         
-         
-        </div>
-        </accordion-header>
+            <div class="font-semibold text-lg">{{ scholar }}</div>
+          
+          
+          </div>
+          </accordion-header>
 
       <accordion-content>
-       <!-- Media (Video or Audio) -->
-      <div class="relative">
-        <img
-          :src="thumbnailUrl"
-          alt="Thumbnail"
-          class="object-cover w-full h-40"
-        />
-        <div class="absolute top-0 right-0 m-2 p-1 bg-gray-900 text-white text-sm rounded-full">
-          {{ mediaType === 'video' ? 'Video' : 'Audio' }}
-        </div>
-      </div>
-      
-      <!-- Content -->
-      <div class="px-4 py-2">
-        <!-- Title -->
-        <div class="font-bold text-lg mb-2">{{ title }}</div>
-        
-        <!-- Description -->
-        <p class="text-gray-600 text-base">{{ description }}</p>
-      </div>
-      
-      <!-- Separation Line -->
-      <div class="border-t border-gray-300"></div>
-      
-          <!-- Author, Category, and Date -->
+          <!-- Media (Video or Audio) -->
+          <div class="relative">
+            <img
+              :src="thumbnailUrl"
+              alt="Thumbnail"
+              class="object-cover w-full h-40"
+            />
+            <div class="absolute top-0 right-0 m-2 p-1 bg-gray-900 text-white text-sm rounded-full">
+              {{ mediaType === 'video' ? 'Video' : 'Audio' }}
+            </div>
+          </div>
+          
+          <!-- Content -->
           <div class="px-4 py-2">
-          
-            <p class="text-sm text-gray-600">
-              <span class="font-semibold">Category:</span> {{ category }} | 
-              <span class="font-semibold">Date:</span> {{ date }}         |
-              <span class="font-semibold">Length:</span> {{ mediaLength }}
-            </p>
-        
-          </div>
-          
-          <!-- Media Length -->
-          <div class="px-6 ">
-            <p class="text-sm text-gray-600">
+            <!-- Title -->
+            <div class="font-bold text-lg mb-2">{{ title }}</div>
             
-            </p>
+            <!-- Description -->
+            <p class="text-gray-600 text-base">{{ description }}</p>
           </div>
           
-          <!-- Social Buttons -->
-          <div class="px-6 py-2 flex items-center space-x-4">
-            <!-- Add social buttons here, e.g., Facebook, Twitter, LinkedIn, etc. -->
-            <button class="text-gray-600 hover:text-blue-500 focus:outline-none">
-              <!-- Add a social icon, e.g., Facebook icon -->
-              <i class="fab fa-facebook-f"></i>
-            </button>
-            <button class="text-gray-600 hover:text-blue-500 focus:outline-none">
-              <!-- Add a social icon, e.g., Twitter icon -->
-              <i class="fab fa-twitter"></i>
-            </button>
-            <!-- Add more social buttons as needed -->
-          </div>
+          <!-- Separation Line -->
+          <div class="border-t border-gray-300"></div>
           
-          <!-- Media URL (Link to video/audio) -->
+              <!-- Author, Category, and Date -->
+              <div class="px-4 py-2">
+              
+                <p class="text-sm text-gray-600">
+                  <span class="font-semibold">Category:</span> {{ category }} | 
+                  <span class="font-semibold">Date:</span> {{ date }}         |
+                  <span class="font-semibold">Length:</span> {{ mediaLength }}
+                </p>
+            
+              </div>
+              
+              <!-- Media Length -->
+              <div class="px-6 ">
+                <p class="text-sm text-gray-600">
+                
+                </p>
+              </div>
+              
+              <!-- Social Buttons -->
+              <div class="px-6 py-2 flex items-center space-x-4">
+                <!-- Add social buttons here, e.g., Facebook, Twitter, LinkedIn, etc. -->
+                <button class="text-gray-600 hover:text-blue-500 focus:outline-none">
+                  <!-- Add a social icon, e.g., Facebook icon -->
+                  <i class="fab fa-facebook-f"></i>
+                </button>
+                <button class="text-gray-600 hover:text-blue-500 focus:outline-none">
+                  <!-- Add a social icon, e.g., Twitter icon -->
+                  <i class="fab fa-twitter"></i>
+                </button>
+                <!-- Add more social buttons as needed -->
+              </div>
+              
+              <!-- Media URL (Link to video/audio) -->
         </accordion-content>
    
       </accordion-panel>
