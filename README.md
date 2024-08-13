@@ -1,6 +1,6 @@
 # alhouda-front
 Alhouda Project Web FrontEnd 
-this only the Frontend , check the Backend in NodeJs+Typescript on : https://github.com/feyroozecode/alhouda-api
+this only the Frontend , the Backend Api Rest in NodeJs+Typescript under dev After IS gonna to bé Open ALso In Sha'a Allah 
 
 We are open for contribition
 
