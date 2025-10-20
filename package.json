@@ -38,7 +38,7 @@
     "postcss": "^8.4.35",
     "tailwindcss": "^3.4.1",
     "typescript": "~5.4.5",
-    "vite": "^6.0.11",
+    "vite": "^7.1.11",
     "vitest": "^1.6.1",
     "volar-service-vetur": "latest",
     "vue-tsc": "^2.0.6"
